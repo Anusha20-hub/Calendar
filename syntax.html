@@ -1,0 +1,24 @@
+<body>
+    <center>
+        <h1>validation of javascript</h1>
+        <form name="myform" method="post"action="success.html"onsubmit="return validdate()">
+        enter your dob:<input type="date" name="date1" required>
+        
+        <br>
+        <br>
+        <input type="submit" value="click me">
+        </form>
+        <script>
+        function validdate(){
+            var curdate=new date();
+            var dob2=new date(document.myform.date1.value)
+            if(dob2>curdate){
+                alert("please enter valid DOB")
+                return false;
+            }
+
+        }
+    </script>
+
+    </center>
+</body>
